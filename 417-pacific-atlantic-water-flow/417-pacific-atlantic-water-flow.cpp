@@ -19,7 +19,7 @@ public:
         }
         return ans;
     }
-    void dfs(vector<vector<int> >& mat, vector<vector<bool> >& visited, int i, int j){        
+    void dfs(vector<vector<int> >& mat, vector<vector<bool> >& visited, int i, int j){
         if(visited[i][j]) return;
         visited[i][j] = true;
 		// if cell reachable from both the oceans, insert into final answer vector
