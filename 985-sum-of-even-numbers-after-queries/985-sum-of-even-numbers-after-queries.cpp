@@ -3,10 +3,8 @@ public:
     vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& queries) {
         vector<int> v;
         int n = queries.size();
-        int totalSum = 0, evenSum = 0;
-        for(int i=0;i<nums.size();i++){            
-            if(nums[i]%2==0) evenSum += nums[i];
-        }
+        int evenSum = 0;
+        for(int i=0;i<nums.size();i++) if(nums[i]%2==0) evenSum += nums[i];        
         for(int i=0;i<n;i++){
             if(nums[queries[i][1]] % 2 == 0){
                 if(queries[i][0] % 2 == 0){
