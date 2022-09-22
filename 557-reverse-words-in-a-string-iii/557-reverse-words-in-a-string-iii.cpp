@@ -4,13 +4,13 @@ class Solution
         string reverseWords(string s) 
         {
             stringstream str(s);
-            string t;
-            string ans="";
+            string t;   
+            s.clear();
             while(getline(str, t, ' ')){
                 reverse(t.begin(), t.end());
-                ans += t;
-                ans += ' ';
+                s += t;
+                s += ' ';
             }
-            return ans.substr(0, ans.size()-1);
+            return s.substr(0, s.size()-1);
         }
 };
