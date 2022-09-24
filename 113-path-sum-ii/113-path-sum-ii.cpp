@@ -16,7 +16,7 @@ public:
         if(!root) return;
         t.push_back(root->val);
         targetSum -= root->val;
-        if((!root->left and !root->right) && targetSum == 0){
+        if(!root->left and !root->right and targetSum == 0){
             v.push_back(t);            
         }else{
             dfs(root->left, targetSum, t);
