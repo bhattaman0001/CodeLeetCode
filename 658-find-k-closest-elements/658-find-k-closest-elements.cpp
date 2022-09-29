@@ -8,14 +8,8 @@ class Solution
             while (i < j)
             {
                 int m = (i + j) >> 1;
-                if (x - arr[m] > arr[m + k] - x)
-                {
-                    i = m + 1;
-                }
-                else
-                {
-                    j = m;
-                }
+                if (x - arr[m] > arr[m + k] - x) i = m + 1;
+                else j = m;
             }
             return vector<int> (arr.begin() + i, arr.begin() + i + k);
         }
