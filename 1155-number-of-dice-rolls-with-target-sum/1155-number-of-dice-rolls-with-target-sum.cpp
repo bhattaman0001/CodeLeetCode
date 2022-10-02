@@ -41,7 +41,7 @@ public:
                 dp[dice][target] = ans % mod;
             }
         }
-        return dp[d][t];
+        return dp[d][t] % mod;
     }
     int numRollsToTarget(int n, int k, int target) {
         // vector<vector<long long>> dp(n + 1, vector<long long>(target + 1, -1));
