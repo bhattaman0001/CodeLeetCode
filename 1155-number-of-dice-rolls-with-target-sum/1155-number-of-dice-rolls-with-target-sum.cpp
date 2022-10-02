@@ -23,9 +23,9 @@ public:
         
         long long int ans = 0;
         for(int i=1;i<=faces;i++){
-            ans += solveMem(dice-1, faces, target-i, dp);
+            ans = ans % mod + solveMem(dice-1, faces, target-i, dp) % mod;
         }
-        return dp[dice][target] = ans;
+        return dp[dice][target] = ans % mod;
     }
     
     long long solveTab(int d, int f, int t){
@@ -44,9 +44,9 @@ public:
         return dp[d][t] % mod;
     }
     int numRollsToTarget(int n, int k, int target) {
-        // vector<vector<long long>> dp(n + 1, vector<long long>(target + 1, -1));
-        // return solveMem(n, k, target, dp); 
+        vector<vector<long long>> dp(n + 1, vector<long long>(target + 1, -1));
+        return solveMem(n, k, target, dp); 
         
-        return solveTab(n, k, target);
+        // return solveTab(n, k, target);
     }
 };
