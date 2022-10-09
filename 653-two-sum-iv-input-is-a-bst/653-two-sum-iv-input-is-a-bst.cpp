@@ -25,7 +25,6 @@ public:
         int i = 0, j = v.size() - 1;
         while(i < j){
             int t = v[i] + v[j];
-            cout<<t<<" ";
             if(t == k) return true;
             if(t > k) j--;
             else i++;
